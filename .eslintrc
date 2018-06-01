@@ -1,0 +1,52 @@
+{
+  "extends": [
+    "standard",
+    "standard-react",
+    "plugin:flowtype/recommended",
+    "prettier",
+    "prettier/react",
+    "prettier/flowtype"
+  ],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "react/jsx-filename-extension": [
+      2,
+      {
+        "extensions": [".jsx", ".js"]
+      }
+    ],
+    "prettier/prettier": 2,
+  },
+  "parser": "babel-eslint",
+  "plugins": ["flowtype", "react", "import", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 2016,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "./webpack/client.prod.js"
+      },
+      "node": {
+        "paths": [
+          "node_modules",
+          "src",
+          "components",
+          "containers",
+          "styles"
+        ]
+      },
+      "flowtype": {
+        "onlyFilesWithFlowAnnotation": true
+      }
+    }
+  }
+}

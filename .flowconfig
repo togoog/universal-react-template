@@ -1,0 +1,17 @@
+[ignore]
+.*/node_modules/flow-bin/.*
+.*/node_modules/react-universal-component/.*
+.*/node_modules/webpack-flush-chunks/.*
+.*/build/.*
+
+[libs]
+
+[lints]
+
+[options]
+module.name_mapper='^components' ->'<PROJECT_ROOT>/src/components'
+module.name_mapper='^containers' ->'<PROJECT_ROOT>/src/containers'
+module.name_mapper='^styles' ->'<PROJECT_ROOT>/src/styles'
+
+[version]
+0.73.0

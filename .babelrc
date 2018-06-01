@@ -1,0 +1,33 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false,
+        "targets": {
+          "browsers": ["last 3 versions", "safari >= 7"]
+        }
+      }
+    ],
+    "react",
+    "stage-2",
+    "flow"
+  ],
+  "plugins": [
+    "universal-import"
+  ],
+  "env": {
+    "production": {
+      "only": [
+        "src"
+      ],
+      "plugins": [
+        "transform-react-constant-elements",
+        "transform-react-inline-elements"
+      ]
+    },
+    "development": {
+      "plugins": ["react-hot-loader/babel"]
+    }
+  }
+}
